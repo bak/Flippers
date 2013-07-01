@@ -19,7 +19,6 @@
 @end
 
 // todo: either get dynamic auto layout working, or limit places and layout w/ arithmetic
-
-static const float GUTTER = 2.0f;
-static const float WIDTH  = ((480 - (GUTTER * 4)) / 5);
-static const float HEIGHT = ((300 - (GUTTER * 2)) / 3);
+extern const float GUTTER;
+extern const float WIDTH;
+extern const float HEIGHT;

@@ -10,6 +10,10 @@
 
 @implementation CalculatorOutlet
 
+const float GUTTER = 2.0f;
+const float WIDTH  = ((480 - (GUTTER * 4)) / 5);
+const float HEIGHT = ((300 - (GUTTER * 2)) / 3);
+
 - (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(id)calculator
 {
     self = [super init];
