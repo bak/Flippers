@@ -22,13 +22,13 @@
 
 - (void)setUp
 {
-    self.operands = [[NSMutableArray alloc] initWithArray:
-                     @[@NO,@NO,@NO,@NO,@NO,@NO,@NO,@NO]];
-    self.result = [[NSMutableArray alloc] initWithArray:
-                     @[@NO,@NO,@NO,@NO]];
+    // Default operand state
+    self.operands = [[NSMutableArray alloc] initWithArray:@[@YES,@NO,@YES,@YES,@YES,@YES,@YES,@NO]];
+    
+    self.result = [[NSMutableArray alloc] initWithArray:@[@NO,@NO,@NO,@NO]];
     self.currentOp = @"AND";
-    [self calculate];
     self.view = [UIView new];
+    [self calculate];
 }
 
 - (void)draw

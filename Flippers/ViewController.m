@@ -41,12 +41,12 @@
     [self.view addSubview:subview];
     subview.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"H:|-10-[subview]-10-|"
+                               constraintsWithVisualFormat:@"H:|[subview]|"
                                options:NSLayoutFormatDirectionLeadingToTrailing
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(subview)]];
     [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:|-10-[subview]-10-|"
+                               constraintsWithVisualFormat:@"V:|[subview]|"
                                options:NSLayoutFormatDirectionLeadingToTrailing
                                metrics:nil
                                views:NSDictionaryOfVariableBindings(subview)]];

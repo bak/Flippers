@@ -412,6 +412,10 @@
 		B528F840177D52C900166DFC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flippers/Flippers-Prefix.pch";
 				INFOPLIST_FILE = "Flippers/Flippers-Info.plist";
@@ -423,6 +427,10 @@
 		B528F841177D52C900166DFC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Applications/Reveal.app/Contents/SharedSupport/iOS-Libraries\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flippers/Flippers-Prefix.pch";
 				INFOPLIST_FILE = "Flippers/Flippers-Info.plist";
@@ -484,6 +492,7 @@
 				B528F841177D52C900166DFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B528F842177D52C900166DFC /* Build configuration list for PBXNativeTarget "FlippersTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				B528F844177D52C900166DFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

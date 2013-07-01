@@ -14,7 +14,7 @@
 {
     self = [super init:state ForRow:row andColumn:col in:calculator];
     if (self) {
-        [self setUpTouchAction];
+        [self setUpTapRecognizer];
     }
     return self;
 }
@@ -24,7 +24,7 @@
     // ;)
 }
 
-- (void)setUpTouchAction
+- (void)setUpTapRecognizer
 {
     UIGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapReceived)];
     [self addGestureRecognizer:recognizer];
