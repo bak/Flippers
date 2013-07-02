@@ -13,7 +13,7 @@
 
 @property int pos;
 
-- (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(id)calculator;
+- (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(CalculatorView *)parentView;
 - (void)tapReceived;
 
 @end

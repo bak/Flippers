@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Calculator.h"
+#import "CalculatorView.h"
 
 @interface CalculatorOutlet : UIView
 
-@property Calculator *calculator;
+@property CalculatorView *parentView;
 @property bool state;
 
-- (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(id)calculator;
+- (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(CalculatorView *)parentView;
 
 @end
 

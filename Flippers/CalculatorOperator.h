@@ -12,6 +12,6 @@
 
 @property NSString *op;
 
-- (id)init:(NSString *)op ForRow:(int)row andColumn:(int)col in:(id)calculator;
+- (id)init:(NSString *)op forRow:(int)row andColumn:(int)col andCurrentOp:(NSString *)currentOp in:(CalculatorView *)parentView;
 
 @end

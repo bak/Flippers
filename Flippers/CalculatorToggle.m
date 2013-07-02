@@ -10,9 +10,9 @@
 
 @implementation CalculatorToggle
 
-- (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(id)calculator
+- (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(CalculatorView *)parentView
 {
-    self = [super init:state ForRow:row andColumn:col in:calculator];
+    self = [super init:state ForRow:row andColumn:col in:parentView];
     if (self) {
         [self setUpTapRecognizer];
     }

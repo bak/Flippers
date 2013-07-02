@@ -8,10 +8,12 @@
 
 #import "ViewController.h"
 #import "Calculator.h"
+#import "CalculatorView.h"
 
 @interface ViewController ()
 
 @property Calculator *calculator;
+@property CalculatorView *calculatorView;
 
 @end
 
@@ -22,22 +24,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
-    self.calculator = [[Calculator alloc] init];
-    [self.calculator setUp];
+    self.calculator = [Calculator new];
+    self.calculatorView = [[CalculatorView alloc] initWithCalculator:self.calculator];
     [self layoutCalculatorSubview];
-    [self.calculator draw];
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.calculatorView draw];
 }
 
 - (void)layoutCalculatorSubview
 {
-    UIView *subview = self.calculator.view;
+// where does this go?
+
+    UIView *subview = self.calculatorView;
     [self.view addSubview:subview];
     subview.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addConstraints:[NSLayoutConstraint

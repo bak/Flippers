@@ -29,6 +29,7 @@
 		B528F85917801EC400166DFC /* CalculatorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = B528F85817801EC400166DFC /* CalculatorResult.m */; };
 		B528F85C1780B1F600166DFC /* CalculatorOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = B528F85B1780B1F600166DFC /* CalculatorOperator.m */; };
 		B528F85F1780B3C600166DFC /* CalculatorOperand.m in Sources */ = {isa = PBXBuildFile; fileRef = B528F85E1780B3C600166DFC /* CalculatorOperand.m */; };
+		B5FDF52617827650002476B5 /* CalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FDF52517827650002476B5 /* CalculatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		B528F85B1780B1F600166DFC /* CalculatorOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorOperator.m; sourceTree = "<group>"; };
 		B528F85D1780B3C600166DFC /* CalculatorOperand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorOperand.h; sourceTree = "<group>"; };
 		B528F85E1780B3C600166DFC /* CalculatorOperand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorOperand.m; sourceTree = "<group>"; };
+		B5FDF52417827650002476B5 /* CalculatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorView.h; sourceTree = "<group>"; };
+		B5FDF52517827650002476B5 /* CalculatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				B528F846177D533A00166DFC /* ViewController.m */,
 				B528F848177D551800166DFC /* Calculator.h */,
 				B528F849177D551800166DFC /* Calculator.m */,
+				B5FDF52417827650002476B5 /* CalculatorView.h */,
+				B5FDF52517827650002476B5 /* CalculatorView.m */,
 				B528F85D1780B3C600166DFC /* CalculatorOperand.h */,
 				B528F85E1780B3C600166DFC /* CalculatorOperand.m */,
 				B528F85A1780B1F600166DFC /* CalculatorOperator.h */,
@@ -311,6 +316,7 @@
 				B528F85917801EC400166DFC /* CalculatorResult.m in Sources */,
 				B528F85C1780B1F600166DFC /* CalculatorOperator.m in Sources */,
 				B528F85F1780B3C600166DFC /* CalculatorOperand.m in Sources */,
+				B5FDF52617827650002476B5 /* CalculatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

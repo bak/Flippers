@@ -10,12 +10,11 @@
 
 @interface Calculator : NSObject
 
-@property UIView *view;
 @property NSString *currentOp;
+@property NSMutableArray *operands;
+@property NSMutableArray *result;
 
-- (void)setUp;
-- (void)draw;
-- (void)toggleAtPosition:(int)pos;
-- (void)setOp:(NSString *)op;
+- (void)calculate;
+- (int)rowLength;
 
 @end

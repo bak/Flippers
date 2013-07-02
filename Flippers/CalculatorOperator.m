@@ -10,15 +10,15 @@
 
 @implementation CalculatorOperator
 
-- (id)init:(NSString *)op ForRow:(int)row andColumn:(int)col in:(Calculator *)calculator
+- (id)init:(NSString *)op forRow:(int)row andColumn:(int)col andCurrentOp:(NSString *)currentOp in:(CalculatorView *)parentView
 {
     // pull out calculator currentOp first to initialize UIView with it
     bool state = false;
-    if ([[calculator currentOp] isEqual:op]) {
+    if ([currentOp isEqual:op]) {
         state = true;
     }
     
-    self = [super init:state ForRow:row andColumn:col in:calculator];
+    self = [super init:state ForRow:row andColumn:col in:parentView];
     if (self) {
         self.op = op;
         [self addLabel];
@@ -28,7 +28,7 @@
 
 - (void)tapReceived
 {
-    [self.calculator setOp:self.op];
+    [self.parentView setOp:self.op];
 }
 
 - (void)addLabel
