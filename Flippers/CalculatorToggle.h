@@ -14,6 +14,6 @@
 @property int pos;
 
 - (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(CalculatorView *)parentView;
-- (void)tapReceived;
+- (void)tapReceived:(UITapGestureRecognizer *)sender;
 
 @end

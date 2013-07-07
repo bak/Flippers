@@ -10,8 +10,7 @@
 
 @implementation CalculatorOutlet
 
-const float GUTTER = 2.0f;
-const float WIDTH  = ((480 - (GUTTER * 4)) / 5);
+const float GUTTER = 1.0f;
 const float HEIGHT = ((300 - (GUTTER * 2)) / 3);
 
 - (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(CalculatorView *)parentView
@@ -20,7 +19,8 @@ const float HEIGHT = ((300 - (GUTTER * 2)) / 3);
     if (self) {
         self.parentView = parentView;
         self.state = state;
-        self.frame = CGRectMake((col * WIDTH) + (col * GUTTER), (row * HEIGHT) + (row * GUTTER), WIDTH, HEIGHT);
+        int w = parentView.cellSize - GUTTER;
+        self.frame = CGRectMake((col * w) + (col * GUTTER), (row * HEIGHT) + (row * GUTTER), w, HEIGHT);
         self.backgroundColor = [self colorForState:self.state];
     }
     return self;

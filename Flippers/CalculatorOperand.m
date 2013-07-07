@@ -19,8 +19,9 @@
     return self;
 }
 
-- (void)tapReceived
+- (void)tapReceived:(UITapGestureRecognizer *)sender
 {
+    
     [self.parentView toggleAtPosition:self.pos];
 }
 

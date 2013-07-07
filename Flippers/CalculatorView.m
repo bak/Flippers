@@ -18,8 +18,14 @@
     self = [super init];
     if (self) {
         self.calculator = calculator;
+        [self setUpSwipes];
     }
     return self;
+}
+
+- (int)cellSize
+{
+    return 480 / (self.calculator.rowLength + 1); // operands plus operator column.
 }
 
 - (void)draw
@@ -32,9 +38,9 @@
 
 - (void)drawOperators
 {
-    [self addSubview:[[CalculatorOperator alloc] init:@"AND" forRow:0 andColumn:[self.calculator rowLength] andCurrentOp:self.calculator.currentOp in:self]];
-    [self addSubview:[[CalculatorOperator alloc] init:@"OR"  forRow:1 andColumn:[self.calculator rowLength] andCurrentOp:self.calculator.currentOp in:self]];
-    [self addSubview:[[CalculatorOperator alloc] init:@"XOR" forRow:2 andColumn:[self.calculator rowLength] andCurrentOp:self.calculator.currentOp in:self]];
+    [self addSubview:[[CalculatorOperator alloc] init:@"&" forRow:0 andColumn:[self.calculator rowLength] andCurrentOp:self.calculator.currentOp in:self]];
+    [self addSubview:[[CalculatorOperator alloc] init:@"|"  forRow:1 andColumn:[self.calculator rowLength] andCurrentOp:self.calculator.currentOp in:self]];
+    [self addSubview:[[CalculatorOperator alloc] init:@"^" forRow:2 andColumn:[self.calculator rowLength] andCurrentOp:self.calculator.currentOp in:self]];
 }
 
 - (void)drawOperands
@@ -66,6 +72,33 @@
     self.calculator.currentOp = op;
     [self.calculator calculate];
     [self draw];
+}
+
+- (void)swipeRightReceived
+{
+    [self.calculator addPlace];
+    [self.calculator calculate];
+    [self draw];
+}
+
+- (void)swipeLeftReceived
+{
+    [self.calculator removePlace];
+    [self.calculator calculate];
+    [self draw];
+}
+
+- (void)setUpSwipes
+{
+    UISwipeGestureRecognizer* swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRightReceived)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    swipeRight.delaysTouchesBegan = YES;
+    [self addGestureRecognizer:swipeRight];
+    
+    UISwipeGestureRecognizer* swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeftReceived)];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    swipeLeft.delaysTouchesBegan = YES;
+    [self addGestureRecognizer:swipeLeft];
 }
 
 @end

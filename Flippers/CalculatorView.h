@@ -17,5 +17,6 @@
 - (void)draw;
 - (void)toggleAtPosition:(int)pos;
 - (void)setOp:(NSString *)op;
+- (int)cellSize;
 
 @end

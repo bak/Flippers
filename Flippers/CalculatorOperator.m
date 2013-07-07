@@ -26,18 +26,18 @@
     return self;
 }
 
-- (void)tapReceived
+- (void)tapReceived:(UITapGestureRecognizer *)sender
 {
     [self.parentView setOp:self.op];
 }
 
 - (void)addLabel
 {
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, WIDTH, HEIGHT)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.frame.size.width, self.frame.size.height)];
     label.backgroundColor = [UIColor clearColor];
     label.text = self.op;
-    label.font = [UIFont boldSystemFontOfSize:20];
-    label.textColor = [[UIColor alloc] initWithWhite:1.0f alpha:0.9f];
+    label.font = [UIFont boldSystemFontOfSize:20.0f];
+    label.textColor = [[UIColor alloc] initWithWhite:1.0f alpha:1.0f];
     label.textAlignment = NSTextAlignmentCenter;
     [self addSubview:label];
 }

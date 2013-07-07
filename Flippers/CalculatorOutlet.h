@@ -17,8 +17,3 @@
 - (id)init:(bool)state ForRow:(int)row andColumn:(int)col in:(CalculatorView *)parentView;
 
 @end
-
-// todo: either get dynamic auto layout working, or limit places and layout w/ arithmetic
-extern const float GUTTER;
-extern const float WIDTH;
-extern const float HEIGHT;

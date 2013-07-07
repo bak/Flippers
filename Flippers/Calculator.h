@@ -15,6 +15,8 @@
 @property NSMutableArray *result;
 
 - (void)calculate;
+- (void)addPlace;
+- (void)removePlace;
 - (int)rowLength;
 
 @end
