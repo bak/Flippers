@@ -19,6 +19,7 @@
     if (self) {
         self.calculator = calculator;
         [self setUpSwipes];
+        [self setUpLongPress];
     }
     return self;
 }
@@ -99,6 +100,11 @@
     swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
     swipeLeft.delaysTouchesBegan = YES;
     [self addGestureRecognizer:swipeLeft];
+}
+
+- (void)setUpLongPress
+{
+
 }
 
 @end
