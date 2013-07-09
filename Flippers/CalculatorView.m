@@ -89,6 +89,11 @@
     [self draw];
 }
 
+- (void)longPressReceived
+{
+    
+}
+
 - (void)setUpSwipes
 {
     UISwipeGestureRecognizer* swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRightReceived)];
@@ -104,7 +109,8 @@
 
 - (void)setUpLongPress
 {
-
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressReceived)];
+    [self addGestureRecognizer:longPress];
 }
 
 @end
