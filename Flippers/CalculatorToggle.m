@@ -19,14 +19,14 @@
     return self;
 }
 
-- (void)tapReceived:(UITapGestureRecognizer *)sender
+- (void)tapReceived
 {
     // ;)
 }
 
 - (void)setUpTapRecognizer
 {
-    UIGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapReceived:)];
+    UIGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapReceived)];
     [self addGestureRecognizer:recognizer];
 }
 

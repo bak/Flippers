@@ -89,9 +89,29 @@
     [self draw];
 }
 
-- (void)longPressReceived
+- (CalculatorOperand *)operandForPoint:(CGPoint)point
 {
-    
+
+}
+
+- (void)longPressReceived:(UILongPressGestureRecognizer *)recognizer
+{
+    CalculatorOperand *currentOperand = [self operandForPoint:[recognizer locationInView:self]];
+    switch (recognizer.state) {
+        case UIGestureRecognizerStateBegan:
+            [currentOperand tapReceived];
+            NSLog(@"handleLongPress: StateBegan");
+            break;
+        case UIGestureRecognizerStateChanged:
+            [currentOperand tapReceived];
+            NSLog(@"handleLongPress: StateChanged");
+            break;
+        case UIGestureRecognizerStateEnded:
+            NSLog(@"handleLongPress: StateEnded");
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)setUpSwipes
@@ -109,7 +129,7 @@
 
 - (void)setUpLongPress
 {
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressReceived)];
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressReceived:)];
     [self addGestureRecognizer:longPress];
 }
 
