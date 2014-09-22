@@ -46,16 +46,16 @@
 - (void)drawOperands
 {
     [self.calculator.operands enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        int row = (idx < [self.calculator rowLength]) ? 0 : 1;
-        int col = (idx < [self.calculator rowLength]) ? idx : (idx - [self.calculator rowLength]);
-        [self addSubview:[[CalculatorOperand alloc] init:[obj boolValue] ForPosition:idx andRow:row andColumn:col in:self]];
+        int row = ((int)idx < [self.calculator rowLength]) ? 0 : 1;
+        int col = ((int)idx < [self.calculator rowLength]) ? (int)idx : ((int)idx - [self.calculator rowLength]);
+        [self addSubview:[[CalculatorOperand alloc] init:[obj boolValue] ForPosition:(int)idx andRow:row andColumn:col in:self]];
     }];
 }
 
 - (void)drawResult
 {
     [self.calculator.result enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [self addSubview:[[CalculatorResult alloc] init:[obj boolValue] ForRow:2 andColumn:idx in:self]];
+        [self addSubview:[[CalculatorResult alloc] init:[obj boolValue] ForRow:2 andColumn:(int)idx in:self]];
     }];
 }
 

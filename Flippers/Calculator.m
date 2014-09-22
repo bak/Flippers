@@ -62,6 +62,6 @@
     }
 }
 
-- (int)rowLength { return self.operands.count / 2; }
+- (int)rowLength { return self.operands.count / 2.0; }
 
 @end
