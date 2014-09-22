@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 beancuke. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface FlippersTests : SenTestCase
+@interface FlippersTests : XCTestCase
 
 @end

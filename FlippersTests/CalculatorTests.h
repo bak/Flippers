@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 beancuke. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import "Calculator.h"
 
-@interface CalculatorTests : SenTestCase
+@interface CalculatorTests : XCTestCase
 
 @property Calculator *subject;
 

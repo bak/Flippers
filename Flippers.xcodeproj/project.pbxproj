@@ -16,7 +16,6 @@
 		B528F823177D52C900166DFC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B528F822177D52C900166DFC /* Default.png */; };
 		B528F825177D52C900166DFC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B528F824177D52C900166DFC /* Default@2x.png */; };
 		B528F827177D52C900166DFC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B528F826177D52C900166DFC /* Default-568h@2x.png */; };
-		B528F82F177D52C900166DFC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B528F82E177D52C900166DFC /* SenTestingKit.framework */; };
 		B528F830177D52C900166DFC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B528F810177D52C900166DFC /* UIKit.framework */; };
 		B528F831177D52C900166DFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B528F812177D52C900166DFC /* Foundation.framework */; };
 		B528F839177D52C900166DFC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B528F837177D52C900166DFC /* InfoPlist.strings */; };
@@ -57,7 +56,6 @@
 		B528F824177D52C900166DFC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B528F826177D52C900166DFC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B528F82D177D52C900166DFC /* FlippersTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlippersTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B528F82E177D52C900166DFC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		B528F836177D52C900166DFC /* FlippersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlippersTests-Info.plist"; sourceTree = "<group>"; };
 		B528F838177D52C900166DFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B528F83A177D52C900166DFC /* FlippersTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlippersTests.h; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B528F82F177D52C900166DFC /* SenTestingKit.framework in Frameworks */,
 				B528F830177D52C900166DFC /* UIKit.framework in Frameworks */,
 				B528F831177D52C900166DFC /* Foundation.framework in Frameworks */,
 			);
@@ -131,7 +128,6 @@
 				B528F810177D52C900166DFC /* UIKit.framework */,
 				B528F812177D52C900166DFC /* Foundation.framework */,
 				B528F814177D52C900166DFC /* CoreGraphics.framework */,
-				B528F82E177D52C900166DFC /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,7 +230,7 @@
 			name = FlippersTests;
 			productName = FlippersTests;
 			productReference = B528F82D177D52C900166DFC /* FlippersTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -243,6 +239,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Flippers;
+				LastTestingUpgradeCheck = 0600;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = beancuke;
 			};
@@ -444,13 +441,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flippers/Flippers-Prefix.pch";
 				INFOPLIST_FILE = "FlippersTests/FlippersTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -461,13 +458,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flippers/Flippers-Prefix.pch";
 				INFOPLIST_FILE = "FlippersTests/FlippersTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
