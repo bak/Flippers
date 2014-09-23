@@ -23,9 +23,12 @@
     return self;
 }
 
-- (int)cellSize
+- (CGSize)cellSize
 {
-    return 480 / (self.calculator.rowLength + 1); // operands plus operator column.
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    int w = screenBounds.size.width / (self.calculator.rowLength + 1); // operands plus operator column.
+    int h = screenBounds.size.height / 3;
+    return CGSizeMake(w, h);
 }
 
 - (void)draw

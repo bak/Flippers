@@ -28,7 +28,7 @@
 - (UIColor *)colorForState:(bool)state
 {
     float alpha = state ? 1.0f : 0.25f;
-    return [UIColor colorWithRed:1.0f green:1.0f blue:0.0f alpha:alpha];
+    return [UIColor colorWithRed:0.5f green:0.5f blue:0.5f alpha:alpha];
 }
 
 @end
